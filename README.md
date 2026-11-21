@@ -21,5 +21,12 @@ Dê dois cliques em `index.html` e ele abre no navegador.
   Para usar uma foto real, troque o `<div class="mock ...">...</div>` de cada projeto por
   `<img src="assets/nome-da-foto.jpg" alt="Descrição" style="width:100%;height:100%;object-fit:cover">`.
 
+## Animações e 3D
+- **Logo 3D** no topo da Home: são camadas da imagem `assets/logo-profundidade.png` empilhadas pelo `js/main.js`. Ele gira com o mouse e com a rolagem.
+- **Revelar na rolagem**: qualquer elemento com a classe `reveal` aparece suavemente quando entra na tela.
+- **Formas flutuantes** (flores, arcos, estrelas) usam `data-parallax="0.2"`: quanto maior o número, mais rápido elas se movem.
+- **Cartões que inclinam** com o mouse usam o atributo `data-tilt`.
+- Quem ativa "reduzir movimento" no celular/computador vê o site sem animações.
+
 ## Publicar
 Pode ser hospedado de graça no GitHub Pages, Netlify ou Vercel (basta enviar esta pasta).

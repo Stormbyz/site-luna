@@ -9,17 +9,16 @@
 <meta property="og:title" content="Contato · Luna Creative Studio">
 <meta property="og:description" content="Peça um orçamento para a Luna Creative Studio pelo WhatsApp, e-mail ou Instagram.">
 <meta property="og:image" content="assets/luna-3d.jpg">
-<meta name="theme-color" content="#1a0047">
+<meta name="theme-color" content="#f4f0ff">
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300..800&family=DM+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&family=Poppins:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..700&family=Poppins:wght@300;400;500;600&display=swap">
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
 <!-- ===== CABEÇALHO (igual em todas as páginas) ===== -->
-<div class="topbar"><span class="dot"></span>Agenda aberta para novos projetos · <a href="contato.html">vamos conversar</a></div>
 <header class="site-header">
   <div class="wrap">
     <nav class="nav" aria-label="Menu principal">
@@ -30,27 +29,29 @@
         <li><a href="servicos.html">Serviços</a></li>
         <li><a href="portfolio.html">Portfólio</a></li>
         <li><a href="contato.html" aria-current="page">Contato</a></li>
-        <li class="nav__mobile-cta"><a href="contato.html">Pedir orçamento →</a></li>
+        <li class="nav__mobile-cta"><a href="contato.html">Pedir orçamento</a></li>
       </ul>
-      <a class="btn btn--dark nav__cta" href="contato.html">Pedir orçamento</a>
+      <a class="btn nav__cta" href="contato.html">Pedir orçamento <span class="btn__arrow" aria-hidden="true">→</span></a>
     </nav>
   </div>
 </header>
 
 <main>
-<section class="page-hero grid-paper">
+<section class="page-hero">
+  <svg class="shape flower " data-parallax="0.2" viewBox="0 0 100 100" aria-hidden="true"><g fill="#b065fe"><ellipse cx="50" cy="25" rx="13" ry="22" transform="rotate(0 50 50)"/><ellipse cx="50" cy="25" rx="13" ry="22" transform="rotate(60 50 50)"/><ellipse cx="50" cy="25" rx="13" ry="22" transform="rotate(120 50 50)"/><ellipse cx="50" cy="25" rx="13" ry="22" transform="rotate(180 50 50)"/><ellipse cx="50" cy="25" rx="13" ry="22" transform="rotate(240 50 50)"/><ellipse cx="50" cy="25" rx="13" ry="22" transform="rotate(300 50 50)"/></g><circle cx="50" cy="50" r="13" fill="#f6efa8"/></svg>
+  <span class="shape arch arch--pink" data-parallax="0.25" aria-hidden="true"></span>
+  <svg class="shape sparkle " data-parallax="0.3" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0c1 7 5 11 12 12-7 1-11 5-12 12-1-7-5-11-12-12 7-1 11-5 12-12z" fill="#264be5"/></svg>
+  <svg class="shape squiggle " data-parallax="0.12" viewBox="0 0 120 150" fill="none" aria-hidden="true"><path d="M20 8 C 90 0, 110 60, 70 70 C 40 78, 30 40, 60 38 C 95 36, 100 95, 78 135" stroke="#ff7fc6" stroke-width="5" stroke-linecap="round"/><path d="M62 122 L 78 137 L 94 120" stroke="#ff7fc6" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/></svg>
   <div class="wrap page-hero__inner">
-    <svg class="deco deco--star1" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0c1 7 5 11 12 12-7 1-11 5-12 12-1-7-5-11-12-12 7-1 11-5 12-12z" fill="#264be5"/></svg>
-    <span class="sticker">Respondemos em até 1 dia útil</span>
-    <span class="eyebrow">Contato</span>
-    <h1 class="page-hero__title">vamos <span class="serif">conversar?</span></h1>
-    <p class="lead">Conte um pouco sobre o seu projeto. Quanto mais detalhes, mais certeira fica a nossa proposta.</p>
+    <span class="tag" style="background:var(--white)">Contato</span>
+    <h1 class="page-hero__title">Vamos <span class="pill-hl pill-hl--ice"><em>conversar?</em></span></h1>
+    <p class="lead">Conte um pouco sobre o seu projeto. Respondemos em até 1 dia útil com os próximos passos.</p>
   </div>
 </section>
 
-<section class="section">
+<section class="section" style="padding-top:1rem">
   <div class="wrap contact">
-    <div class="contact-cards">
+    <div class="contact-cards reveal reveal--left">
       <div class="contact-card">
         <span class="contact-card__label">WhatsApp</span>
         <span class="contact-card__value">+55 (11) 96379-7683</span>
@@ -62,21 +63,17 @@
       <div class="contact-card">
         <span class="contact-card__label">E-mail</span>
         <span class="contact-card__value">operacao@lunaagenciadedesign.com</span>
-        <div class="contact-card__actions">
-          <button class="mini-btn" type="button" data-copy="operacao@lunaagenciadedesign.com">Copiar e-mail</button>
-        </div>
+        <div class="contact-card__actions"><button class="mini-btn" type="button" data-copy="operacao@lunaagenciadedesign.com">Copiar e-mail</button></div>
       </div>
       <div class="contact-card">
         <span class="contact-card__label">Instagram</span>
         <span class="contact-card__value">@luna_creativestudio_</span>
-        <div class="contact-card__actions">
-          <a class="mini-btn" href="https://instagram.com/luna_creativestudio_" target="_blank" rel="noopener">Ver perfil</a>
-        </div>
+        <div class="contact-card__actions"><a class="mini-btn" href="https://instagram.com/luna_creativestudio_" target="_blank" rel="noopener">Ver perfil</a></div>
       </div>
-      <p class="form__note">Atendimento de segunda a sexta, das 9h às 18h. Estúdio em São Paulo, atendimento em todo o Brasil.</p>
+      <p class="note">Atendimento de segunda a sexta, das 9h às 18h. Estúdio em São Paulo, atendimento em todo o Brasil.</p>
     </div>
 
-    <form class="form" id="form-contato" novalidate>
+    <form class="form reveal reveal--right" id="form-contato" novalidate>
       <h2>Pedir orçamento</h2>
       <div class="form__row">
         <div class="field"><label for="nome">Seu nome *</label><input id="nome" name="nome" type="text" autocomplete="name" placeholder="Como podemos te chamar?"></div>
@@ -106,13 +103,13 @@
       </div>
       <div class="field"><label for="mensagem">Conte sobre o projeto *</label><textarea id="mensagem" name="mensagem" placeholder="O que você faz, o que precisa e para quando."></textarea></div>
       <p class="form__error" role="alert" hidden></p>
-      <button class="btn btn--dark btn--big" type="submit">Preparar mensagem</button>
+      <div><button class="btn btn--big" type="submit">Preparar mensagem <span class="btn__arrow" aria-hidden="true">→</span></button></div>
       <div class="form__done" id="form-done" hidden>
         <strong>Sua mensagem está pronta.</strong>
         <span>Toque no botão abaixo para enviá-la pelo WhatsApp da Luna.</span>
-        <a class="btn btn--dark" href="#" target="_blank" rel="noopener">Enviar pelo WhatsApp</a>
+        <a class="btn" href="#" target="_blank" rel="noopener">Enviar pelo WhatsApp <span class="btn__arrow" aria-hidden="true">→</span></a>
       </div>
-      <p class="form__note">* Campos obrigatórios. A mensagem abre no WhatsApp para você revisar antes de enviar.</p>
+      <p class="note">* Campos obrigatórios. A mensagem abre no WhatsApp para você revisar antes de enviar.</p>
     </form>
   </div>
 </section>
@@ -123,7 +120,7 @@
   <div class="wrap">
     <div class="footer__grid">
       <div class="footer__brand">
-        <img src="assets/logo-luna-branco.png" alt="Luna Creative Studio" width="955" height="389" loading="lazy">
+        <img src="assets/logo-luna.png" alt="Luna Creative Studio" width="955" height="389" loading="lazy">
         <p>Estúdio criativo de branding, social media e web design. Criamos marcas com brilho próprio para negócios de todo o Brasil.</p>
       </div>
       <div>
@@ -136,6 +133,15 @@
         </ul>
       </div>
       <div>
+        <p class="footer__title">Serviços</p>
+        <ul class="footer__list">
+          <li><a href="servicos.html#branding">Branding</a></li>
+          <li><a href="servicos.html#social">Social media</a></li>
+          <li><a href="servicos.html#web">Web design</a></li>
+          <li><a href="servicos.html#motion">Motion</a></li>
+        </ul>
+      </div>
+      <div>
         <p class="footer__title">Fale com a gente</p>
         <ul class="footer__list">
           <li><a href="https://instagram.com/luna_creativestudio_" target="_blank" rel="noopener">@luna_creativestudio_</a></li>
@@ -145,7 +151,7 @@
         </ul>
       </div>
     </div>
-    <p class="footer__big" aria-hidden="true">\luna<span>.</span></p>
+    <p class="footer__big" aria-hidden="true">luna.</p>
     <div class="footer__bottom">
       <span>© <span data-year>2026</span> Luna Creative Studio. Todos os direitos reservados.</span>
       <span>Feito com café e luar.</span>

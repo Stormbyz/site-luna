@@ -9,17 +9,16 @@
 <meta property="og:title" content="Serviços · Luna Creative Studio">
 <meta property="og:description" content="Branding, social media, web design, design gráfico, motion e consultoria de marca.">
 <meta property="og:image" content="assets/luna-3d.jpg">
-<meta name="theme-color" content="#1a0047">
+<meta name="theme-color" content="#f4f0ff">
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300..800&family=DM+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&family=Poppins:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..700&family=Poppins:wght@300;400;500;600&display=swap">
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
 <!-- ===== CABEÇALHO (igual em todas as páginas) ===== -->
-<div class="topbar"><span class="dot"></span>Agenda aberta para novos projetos · <a href="contato.html">vamos conversar</a></div>
 <header class="site-header">
   <div class="wrap">
     <nav class="nav" aria-label="Menu principal">
@@ -30,95 +29,89 @@
         <li><a href="servicos.html" aria-current="page">Serviços</a></li>
         <li><a href="portfolio.html">Portfólio</a></li>
         <li><a href="contato.html">Contato</a></li>
-        <li class="nav__mobile-cta"><a href="contato.html">Pedir orçamento →</a></li>
+        <li class="nav__mobile-cta"><a href="contato.html">Pedir orçamento</a></li>
       </ul>
-      <a class="btn btn--dark nav__cta" href="contato.html">Pedir orçamento</a>
+      <a class="btn nav__cta" href="contato.html">Pedir orçamento <span class="btn__arrow" aria-hidden="true">→</span></a>
     </nav>
   </div>
 </header>
 
 <main>
-<section class="page-hero grid-paper">
+<section class="page-hero">
+  <svg class="shape flower " data-parallax="0.2" viewBox="0 0 100 100" aria-hidden="true"><g fill="#b065fe"><ellipse cx="50" cy="25" rx="13" ry="22" transform="rotate(0 50 50)"/><ellipse cx="50" cy="25" rx="13" ry="22" transform="rotate(60 50 50)"/><ellipse cx="50" cy="25" rx="13" ry="22" transform="rotate(120 50 50)"/><ellipse cx="50" cy="25" rx="13" ry="22" transform="rotate(180 50 50)"/><ellipse cx="50" cy="25" rx="13" ry="22" transform="rotate(240 50 50)"/><ellipse cx="50" cy="25" rx="13" ry="22" transform="rotate(300 50 50)"/></g><circle cx="50" cy="50" r="13" fill="#f6efa8"/></svg>
+  <span class="shape arch arch--pink" data-parallax="0.25" aria-hidden="true"></span>
+  <svg class="shape sparkle " data-parallax="0.3" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0c1 7 5 11 12 12-7 1-11 5-12 12-1-7-5-11-12-12 7-1 11-5 12-12z" fill="#264be5"/></svg>
+  <svg class="shape squiggle " data-parallax="0.12" viewBox="0 0 120 150" fill="none" aria-hidden="true"><path d="M20 8 C 90 0, 110 60, 70 70 C 40 78, 30 40, 60 38 C 95 36, 100 95, 78 135" stroke="#b065fe" stroke-width="5" stroke-linecap="round"/><path d="M62 122 L 78 137 L 94 120" stroke="#b065fe" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/></svg>
   <div class="wrap page-hero__inner">
-    <svg class="deco deco--star2" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0c1 7 5 11 12 12-7 1-11 5-12 12-1-7-5-11-12-12 7-1 11-5 12-12z" fill="#264be5"/></svg>
-    <span class="sticker sticker--lilac">Clique em cada serviço para ver o que está incluso</span>
-    <span class="eyebrow">Serviços</span>
-    <h1 class="page-hero__title">o que a <span class="serif">luna</span> faz</h1>
-    <p class="lead">Seis frentes de trabalho que podem ser contratadas separadas ou combinadas em um pacote sob medida para o momento do seu negócio.</p>
+    <span class="tag" style="background:var(--white)">Serviços</span>
+    <h1 class="page-hero__title">O que a <span class="pill-hl pill-hl--lav"><em>Luna</em></span> faz</h1>
+    <p class="lead">Seis frentes de trabalho que podem ser contratadas separadas ou combinadas num pacote sob medida para o momento do seu negócio.</p>
   </div>
 </section>
 
-<div class="marquee marquee--lilac" aria-hidden="true">
-  <div class="marquee__track">
-    <div class="marquee__group"><span class="marquee__item">Estratégia</span><span class="marquee__sep"></span><span class="marquee__item serif">criatividade</span><span class="marquee__sep"></span><span class="marquee__item">Consistência</span><span class="marquee__sep"></span><span class="marquee__item serif">resultado</span><span class="marquee__sep"></span></div>
-    <div class="marquee__group"><span class="marquee__item">Estratégia</span><span class="marquee__sep"></span><span class="marquee__item serif">criatividade</span><span class="marquee__sep"></span><span class="marquee__item">Consistência</span><span class="marquee__sep"></span><span class="marquee__item serif">resultado</span><span class="marquee__sep"></span></div>
-  </div>
-</div>
-
-
-<section class="section">
+<section class="section" style="padding-top:1rem">
   <div class="wrap">
     <div class="service-list">
-      <details class="service-item" id="branding" open>
+      <details class="service-item reveal" style="--d:0" id="branding" open>
         <summary>
-          <span class="service-item__tag" style="background:var(--lilac-soft)"><svg viewBox="0 0 24 24" fill="none" stroke="#1a0047" stroke-width="2"><circle cx="9" cy="10" r="6" fill="#b065fe"/><rect x="11" y="11" width="9" height="9" rx="1" fill="#264be5"/></svg></span>
+          <span class="service-item__icon" style="background:var(--lav)" aria-hidden="true"><svg viewBox="0 0 40 40"><circle cx="15" cy="16" r="10" fill="#b065fe"/><rect x="18" y="18" width="16" height="16" rx="3" fill="#264be5"/></svg></span>
           <span class="service-item__name">Branding & identidade visual<small>Para quem está começando ou precisa se reposicionar.</small></span>
-          <span class="service-item__icon" aria-hidden="true">+</span>
+          <span class="service-item__toggle" aria-hidden="true">+</span>
         </summary>
         <div class="service-item__body">
           <p>Construímos a base da sua marca: o conceito, o logo e todo o sistema visual que deixa sua comunicação reconhecível em qualquer lugar, do cartão de visita ao outdoor.</p>
           <ul class="deliverables"><li>Pesquisa e conceito</li><li>Logo e variações</li><li>Paleta de cores</li><li>Tipografia</li><li>Padrões e grafismos</li><li>Manual da marca</li><li>Papelaria</li></ul>
         </div>
       </details>
-      <details class="service-item" id="social">
+      <details class="service-item reveal" style="--d:1" id="social">
         <summary>
-          <span class="service-item__tag" style="background:var(--blue-soft)"><svg viewBox="0 0 24 24" fill="none" stroke="#1a0047" stroke-width="2"><rect x="5" y="2" width="14" height="20" rx="3" fill="#ffffff"/><path d="M12 16s-3.5-2-3.5-4.3A1.9 1.9 0 0 1 12 10.6a1.9 1.9 0 0 1 3.5 1.1C15.5 14 12 16 12 16z" fill="#b065fe"/></svg></span>
+          <span class="service-item__icon" style="background:var(--pink)" aria-hidden="true"><svg viewBox="0 0 40 40"><rect x="10" y="4" width="20" height="32" rx="5" fill="#ffffff"/><path d="M20 26s-6-3.5-6-7.5a3.2 3.2 0 0 1 6-1.6 3.2 3.2 0 0 1 6 1.6c0 4-6 7.5-6 7.5z" fill="#ff7fc6"/></svg></span>
           <span class="service-item__name">Social media<small>Para manter o perfil ativo, bonito e com estratégia.</small></span>
-          <span class="service-item__icon" aria-hidden="true">+</span>
+          <span class="service-item__toggle" aria-hidden="true">+</span>
         </summary>
         <div class="service-item__body">
           <p>Planejamos e criamos o conteúdo das suas redes todo mês. Linha editorial, calendário, design dos posts e legendas pensadas para gerar conversa e vendas.</p>
           <ul class="deliverables"><li>Planejamento mensal</li><li>Posts e carrosséis</li><li>Stories</li><li>Capas de reels</li><li>Legendas</li><li>Destaques</li><li>Relatório mensal</li></ul>
         </div>
       </details>
-      <details class="service-item" id="web">
+      <details class="service-item reveal" style="--d:2" id="web">
         <summary>
-          <span class="service-item__tag" style="background:var(--moon)"><svg viewBox="0 0 24 24" fill="none" stroke="#1a0047" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2" fill="#ffffff"/><path d="M2 9h20"/><circle cx="16" cy="14.5" r="2.5" fill="#264be5"/></svg></span>
+          <span class="service-item__icon" style="background:var(--ice)" aria-hidden="true"><svg viewBox="0 0 40 40"><rect x="4" y="8" width="32" height="24" rx="4" fill="#ffffff"/><rect x="4" y="8" width="32" height="6" rx="3" fill="#264be5"/><circle cx="27" cy="23" r="4" fill="#b065fe"/></svg></span>
           <span class="service-item__name">Web design<small>Para vender e ser encontrado na internet.</small></span>
-          <span class="service-item__icon" aria-hidden="true">+</span>
+          <span class="service-item__toggle" aria-hidden="true">+</span>
         </summary>
         <div class="service-item__body">
           <p>Criamos sites e landing pages com visual único, textos claros e carregamento rápido. Tudo funcionando bem no celular e pronto para aparecer no Google.</p>
           <ul class="deliverables"><li>Site institucional</li><li>Landing page</li><li>Loja virtual</li><li>Layout responsivo</li><li>SEO básico</li><li>Integração com WhatsApp</li></ul>
         </div>
       </details>
-      <details class="service-item" id="grafico">
+      <details class="service-item reveal" style="--d:0" id="grafico">
         <summary>
-          <span class="service-item__tag" style="background:var(--white)"><svg viewBox="0 0 24 24" fill="none" stroke="#1a0047" stroke-width="2"><path d="M4 3h11l5 5v13H4z" fill="#ffffff"/><path d="M8 12h8M8 16h5"/></svg></span>
+          <span class="service-item__icon" style="background:var(--butter)" aria-hidden="true"><svg viewBox="0 0 40 40"><path d="M9 4h15l7 7v25H9z" fill="#ffffff"/><path d="M14 20h12M14 26h8" stroke="#1a0047" stroke-width="2.5" stroke-linecap="round"/></svg></span>
           <span class="service-item__name">Design gráfico & editorial<small>Para materiais impressos e digitais.</small></span>
-          <span class="service-item__icon" aria-hidden="true">+</span>
+          <span class="service-item__toggle" aria-hidden="true">+</span>
         </summary>
         <div class="service-item__body">
           <p>Peças que carregam a sua marca com consistência: apresentações comerciais, catálogos, cardápios, e-books, embalagens e materiais para eventos.</p>
           <ul class="deliverables"><li>Apresentações</li><li>Catálogos</li><li>Cardápios</li><li>E-books</li><li>Embalagens</li><li>Sinalização</li></ul>
         </div>
       </details>
-      <details class="service-item" id="motion">
+      <details class="service-item reveal" style="--d:1" id="motion">
         <summary>
-          <span class="service-item__tag" style="background:var(--lilac-soft)"><svg viewBox="0 0 24 24" fill="none" stroke="#1a0047" stroke-width="2"><circle cx="12" cy="12" r="9" fill="#ffffff"/><path d="M10 8l6 4-6 4z" fill="#264be5"/></svg></span>
+          <span class="service-item__icon" style="background:var(--lav-2)" aria-hidden="true"><svg viewBox="0 0 40 40"><circle cx="20" cy="20" r="15" fill="#ffffff"/><path d="M17 14l9 6-9 6z" fill="#264be5"/></svg></span>
           <span class="service-item__name">Motion & vídeo<small>Para dar movimento à sua marca.</small></span>
-          <span class="service-item__icon" aria-hidden="true">+</span>
+          <span class="service-item__toggle" aria-hidden="true">+</span>
         </summary>
         <div class="service-item__body">
           <p>Animações de logo, vinhetas, reels editados e vídeos curtos que prendem a atenção nos primeiros segundos.</p>
           <ul class="deliverables"><li>Animação de logo</li><li>Vinhetas</li><li>Edição de reels</li><li>Motion para anúncios</li><li>GIFs e stickers</li></ul>
         </div>
       </details>
-      <details class="service-item" id="consultoria">
+      <details class="service-item reveal" style="--d:2" id="consultoria">
         <summary>
-          <span class="service-item__tag" style="background:var(--blue-soft)"><svg viewBox="0 0 24 24" fill="none" stroke="#1a0047" stroke-width="2"><path d="M4 5h16v11H9l-5 4z" fill="#ffffff"/><circle cx="9" cy="10.5" r="1" fill="#1a0047"/><circle cx="12" cy="10.5" r="1" fill="#1a0047"/><circle cx="15" cy="10.5" r="1" fill="#1a0047"/></svg></span>
+          <span class="service-item__icon" style="background:var(--ice)" aria-hidden="true"><svg viewBox="0 0 40 40"><path d="M6 8h28v18H15l-9 7z" fill="#ffffff"/><circle cx="14" cy="17" r="2" fill="#1a0047"/><circle cx="20" cy="17" r="2" fill="#1a0047"/><circle cx="26" cy="17" r="2" fill="#1a0047"/></svg></span>
           <span class="service-item__name">Consultoria de marca<small>Para quem quer clareza antes de investir.</small></span>
-          <span class="service-item__icon" aria-hidden="true">+</span>
+          <span class="service-item__toggle" aria-hidden="true">+</span>
         </summary>
         <div class="service-item__body">
           <p>Uma sessão estratégica para analisar sua marca atual, seus concorrentes e definir os próximos passos com prioridade e orçamento realistas.</p>
@@ -129,14 +122,15 @@
   </div>
 </section>
 
-<section class="section grid-paper" style="border-top: var(--border);">
+<section class="panel panel--lav">
+  <svg class="shape flower " data-parallax="0.1" viewBox="0 0 100 100" aria-hidden="true"><g fill="#ffffff"><ellipse cx="50" cy="25" rx="13" ry="22" transform="rotate(0 50 50)"/><ellipse cx="50" cy="25" rx="13" ry="22" transform="rotate(60 50 50)"/><ellipse cx="50" cy="25" rx="13" ry="22" transform="rotate(120 50 50)"/><ellipse cx="50" cy="25" rx="13" ry="22" transform="rotate(180 50 50)"/><ellipse cx="50" cy="25" rx="13" ry="22" transform="rotate(240 50 50)"/><ellipse cx="50" cy="25" rx="13" ry="22" transform="rotate(300 50 50)"/></g><circle cx="50" cy="50" r="13" fill="#ff9ad5"/></svg>
   <div class="wrap faq">
-    <div style="display:grid; gap:1rem; align-content:start">
-      <span class="eyebrow">Dúvidas frequentes</span>
-      <h2 class="section-title">Perguntas que <span class="serif">sempre</span> aparecem</h2>
+    <div class="faq__intro reveal reveal--left">
+      <span class="label">Dúvidas frequentes</span>
+      <h2 class="title">Perguntas que <em>sempre</em> aparecem</h2>
       <p class="lead">Não encontrou o que procurava? Mande uma mensagem e a gente responde rapidinho.</p>
     </div>
-    <div class="faq__list">
+    <div class="faq__list reveal reveal--right">
       <details><summary>Quanto tempo leva um projeto de branding?</summary><p>Em média de 4 a 6 semanas, do briefing à entrega do manual da marca. O prazo exato depende do escopo e das rodadas de ajuste.</p></details>
       <details><summary>Vocês atendem empresas de fora de São Paulo?</summary><p>Sim. Trabalhamos com clientes de todo o Brasil e do exterior. Reuniões, apresentações e aprovações acontecem online.</p></details>
       <details><summary>Como funciona o orçamento?</summary><p>Depois de uma conversa rápida sobre o seu projeto, enviamos uma proposta com escopo, prazos e valores. Sem compromisso.</p></details>
@@ -145,17 +139,20 @@
     </div>
   </div>
 </section>
+<div style="height:clamp(1rem,2vw,1.5rem)"></div>
 
 <!-- ===== CHAMADA FINAL ===== -->
-<section class="cta-band grid-paper">
-  <div class="wrap cta-band__inner">
-    <svg class="deco deco--moon" viewBox="0 0 64 64" aria-hidden="true"><path d="M40 5a27 27 0 1 0 19 42A23 23 0 0 1 40 5z" fill="#f2eba0" stroke="#1a0047" stroke-width="2.5" stroke-linejoin="round"/><circle cx="24" cy="30" r="3" fill="#1a0047" opacity=".25"/><circle cx="32" cy="46" r="2" fill="#1a0047" opacity=".25"/></svg>
-    <span class="eyebrow">Próximo passo</span>
-    <h2 class="cta-band__title">Bora tirar sua ideia da <span class="serif">órbita?</span></h2>
+<section class="panel cta">
+  <div class="stage__blob" aria-hidden="true"><svg viewBox="0 0 800 500" preserveAspectRatio="xMidYMid slice"><defs><linearGradient id="grad-cta" x1="0" x2="1" y1="0" y2="0.3"><stop offset="0" stop-color="#b065fe"/><stop offset=".55" stop-color="#264be5"/><stop offset="1" stop-color="#ff9ad5"/></linearGradient></defs><path d="M60 310 C 150 540, 390 520, 470 330 S 690 70, 770 230" fill="none" stroke="url(#grad-cta)" stroke-width="120" stroke-linecap="round"/><circle cx="160" cy="110" r="70" fill="#7fd6ff" opacity=".55"/><circle cx="690" cy="420" r="80" fill="#cfb8ff" opacity=".8"/></svg></div>
+  <svg class="shape flower " data-parallax="0.1" viewBox="0 0 100 100" aria-hidden="true"><g fill="#ffd3ec"><ellipse cx="50" cy="25" rx="13" ry="22" transform="rotate(0 50 50)"/><ellipse cx="50" cy="25" rx="13" ry="22" transform="rotate(60 50 50)"/><ellipse cx="50" cy="25" rx="13" ry="22" transform="rotate(120 50 50)"/><ellipse cx="50" cy="25" rx="13" ry="22" transform="rotate(180 50 50)"/><ellipse cx="50" cy="25" rx="13" ry="22" transform="rotate(240 50 50)"/><ellipse cx="50" cy="25" rx="13" ry="22" transform="rotate(300 50 50)"/></g><circle cx="50" cy="50" r="13" fill="#b065fe"/></svg>
+  <svg class="shape sparkle " data-parallax="0.2" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0c1 7 5 11 12 12-7 1-11 5-12 12-1-7-5-11-12-12 7-1 11-5 12-12z" fill="#f6efa8"/></svg>
+  <div class="wrap cta__inner reveal">
+    <span class="label">Próximo passo</span>
+    <h2 class="title">Bora tirar sua ideia da <em>órbita?</em></h2>
     <p class="lead">Conte o que você precisa. Respondemos em até 1 dia útil com os próximos passos e uma proposta sob medida.</p>
     <div class="hero__actions">
-      <a class="btn btn--dark btn--big" href="contato.html">Pedir orçamento</a>
-      <a class="btn btn--big" href="https://wa.me/5511963797683" target="_blank" rel="noopener">Chamar no WhatsApp</a>
+      <a class="btn btn--light btn--big" href="contato.html">Pedir orçamento <span class="btn__arrow" aria-hidden="true">→</span></a>
+      <a class="btn btn--big" style="background:var(--blue)" href="https://wa.me/5511963797683" target="_blank" rel="noopener">Chamar no WhatsApp <span class="btn__arrow" aria-hidden="true">→</span></a>
     </div>
   </div>
 </section>
@@ -167,7 +164,7 @@
   <div class="wrap">
     <div class="footer__grid">
       <div class="footer__brand">
-        <img src="assets/logo-luna-branco.png" alt="Luna Creative Studio" width="955" height="389" loading="lazy">
+        <img src="assets/logo-luna.png" alt="Luna Creative Studio" width="955" height="389" loading="lazy">
         <p>Estúdio criativo de branding, social media e web design. Criamos marcas com brilho próprio para negócios de todo o Brasil.</p>
       </div>
       <div>
@@ -180,6 +177,15 @@
         </ul>
       </div>
       <div>
+        <p class="footer__title">Serviços</p>
+        <ul class="footer__list">
+          <li><a href="servicos.html#branding">Branding</a></li>
+          <li><a href="servicos.html#social">Social media</a></li>
+          <li><a href="servicos.html#web">Web design</a></li>
+          <li><a href="servicos.html#motion">Motion</a></li>
+        </ul>
+      </div>
+      <div>
         <p class="footer__title">Fale com a gente</p>
         <ul class="footer__list">
           <li><a href="https://instagram.com/luna_creativestudio_" target="_blank" rel="noopener">@luna_creativestudio_</a></li>
@@ -189,7 +195,7 @@
         </ul>
       </div>
     </div>
-    <p class="footer__big" aria-hidden="true">\luna<span>.</span></p>
+    <p class="footer__big" aria-hidden="true">luna.</p>
     <div class="footer__bottom">
       <span>© <span data-year>2026</span> Luna Creative Studio. Todos os direitos reservados.</span>
       <span>Feito com café e luar.</span>
