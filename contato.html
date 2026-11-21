@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Contato · Luna Creative Studio</title>
+<meta name="description" content="Peça um orçamento para a Luna Creative Studio pelo WhatsApp, e-mail ou Instagram.">
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta property="og:title" content="Contato · Luna Creative Studio">
+<meta property="og:description" content="Peça um orçamento para a Luna Creative Studio pelo WhatsApp, e-mail ou Instagram.">
+<meta property="og:image" content="assets/luna-3d.jpg">
+<meta name="theme-color" content="#1a0047">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300..800&family=DM+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&family=Poppins:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- ===== CABEÇALHO (igual em todas as páginas) ===== -->
+<div class="topbar"><span class="dot"></span>Agenda aberta para novos projetos · <a href="contato.html">vamos conversar</a></div>
+<header class="site-header">
+  <div class="wrap">
+    <nav class="nav" aria-label="Menu principal">
+      <a class="nav__logo" href="index.html"><img src="assets/logo-luna.png" alt="Luna Creative Studio" width="955" height="389"></a>
+      <button class="nav__toggle" type="button" aria-label="Abrir menu" aria-expanded="false"><span></span></button>
+      <ul class="nav__links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="servicos.html">Serviços</a></li>
+        <li><a href="portfolio.html">Portfólio</a></li>
+        <li><a href="contato.html" aria-current="page">Contato</a></li>
+        <li class="nav__mobile-cta"><a href="contato.html">Pedir orçamento →</a></li>
+      </ul>
+      <a class="btn btn--dark nav__cta" href="contato.html">Pedir orçamento</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<section class="page-hero grid-paper">
+  <div class="wrap page-hero__inner">
+    <svg class="deco deco--star1" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0c1 7 5 11 12 12-7 1-11 5-12 12-1-7-5-11-12-12 7-1 11-5 12-12z" fill="#264be5"/></svg>
+    <span class="sticker">Respondemos em até 1 dia útil</span>
+    <span class="eyebrow">Contato</span>
+    <h1 class="page-hero__title">vamos <span class="serif">conversar?</span></h1>
+    <p class="lead">Conte um pouco sobre o seu projeto. Quanto mais detalhes, mais certeira fica a nossa proposta.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap contact">
+    <div class="contact-cards">
+      <div class="contact-card">
+        <span class="contact-card__label">WhatsApp</span>
+        <span class="contact-card__value">+55 (11) 96379-7683</span>
+        <div class="contact-card__actions">
+          <a class="mini-btn" href="https://wa.me/5511963797683" target="_blank" rel="noopener">Abrir conversa</a>
+          <button class="mini-btn" type="button" data-copy="+55 11 96379-7683">Copiar</button>
+        </div>
+      </div>
+      <div class="contact-card">
+        <span class="contact-card__label">E-mail</span>
+        <span class="contact-card__value">operacao@lunaagenciadedesign.com</span>
+        <div class="contact-card__actions">
+          <button class="mini-btn" type="button" data-copy="operacao@lunaagenciadedesign.com">Copiar e-mail</button>
+        </div>
+      </div>
+      <div class="contact-card">
+        <span class="contact-card__label">Instagram</span>
+        <span class="contact-card__value">@luna_creativestudio_</span>
+        <div class="contact-card__actions">
+          <a class="mini-btn" href="https://instagram.com/luna_creativestudio_" target="_blank" rel="noopener">Ver perfil</a>
+        </div>
+      </div>
+      <p class="form__note">Atendimento de segunda a sexta, das 9h às 18h. Estúdio em São Paulo, atendimento em todo o Brasil.</p>
+    </div>
+
+    <form class="form" id="form-contato" novalidate>
+      <h2>Pedir orçamento</h2>
+      <div class="form__row">
+        <div class="field"><label for="nome">Seu nome *</label><input id="nome" name="nome" type="text" autocomplete="name" placeholder="Como podemos te chamar?"></div>
+        <div class="field"><label for="empresa">Empresa</label><input id="empresa" name="empresa" type="text" autocomplete="organization" placeholder="Nome do seu negócio"></div>
+      </div>
+      <div class="field"><label for="email">E-mail</label><input id="email" name="email" type="email" autocomplete="email" placeholder="voce@empresa.com"></div>
+      <fieldset class="field">
+        <legend>Do que você precisa?</legend>
+        <div class="pills">
+          <label class="pill"><input type="checkbox" id="s-branding" name="servico" value="Branding"><span>Branding</span></label>
+          <label class="pill"><input type="checkbox" id="s-social" name="servico" value="Social media"><span>Social media</span></label>
+          <label class="pill"><input type="checkbox" id="s-web" name="servico" value="Site"><span>Site</span></label>
+          <label class="pill"><input type="checkbox" id="s-grafico" name="servico" value="Design gráfico"><span>Design gráfico</span></label>
+          <label class="pill"><input type="checkbox" id="s-motion" name="servico" value="Motion"><span>Motion</span></label>
+          <label class="pill"><input type="checkbox" id="s-outro" name="servico" value="Outro"><span>Outro</span></label>
+        </div>
+      </fieldset>
+      <div class="field">
+        <label for="orcamento">Investimento previsto</label>
+        <select id="orcamento" name="orcamento">
+          <option value="">Prefiro conversar antes</option>
+          <option>Até R$ 3 mil</option>
+          <option>R$ 3 mil a R$ 8 mil</option>
+          <option>R$ 8 mil a R$ 15 mil</option>
+          <option>Acima de R$ 15 mil</option>
+        </select>
+      </div>
+      <div class="field"><label for="mensagem">Conte sobre o projeto *</label><textarea id="mensagem" name="mensagem" placeholder="O que você faz, o que precisa e para quando."></textarea></div>
+      <p class="form__error" role="alert" hidden></p>
+      <button class="btn btn--dark btn--big" type="submit">Preparar mensagem</button>
+      <div class="form__done" id="form-done" hidden>
+        <strong>Sua mensagem está pronta.</strong>
+        <span>Toque no botão abaixo para enviá-la pelo WhatsApp da Luna.</span>
+        <a class="btn btn--dark" href="#" target="_blank" rel="noopener">Enviar pelo WhatsApp</a>
+      </div>
+      <p class="form__note">* Campos obrigatórios. A mensagem abre no WhatsApp para você revisar antes de enviar.</p>
+    </form>
+  </div>
+</section>
+</main>
+
+<!-- ===== RODAPÉ (igual em todas as páginas) ===== -->
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer__grid">
+      <div class="footer__brand">
+        <img src="assets/logo-luna-branco.png" alt="Luna Creative Studio" width="955" height="389" loading="lazy">
+        <p>Estúdio criativo de branding, social media e web design. Criamos marcas com brilho próprio para negócios de todo o Brasil.</p>
+      </div>
+      <div>
+        <p class="footer__title">Navegue</p>
+        <ul class="footer__list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="servicos.html">Serviços</a></li>
+          <li><a href="portfolio.html">Portfólio</a></li>
+          <li><a href="contato.html">Contato</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="footer__title">Fale com a gente</p>
+        <ul class="footer__list">
+          <li><a href="https://instagram.com/luna_creativestudio_" target="_blank" rel="noopener">@luna_creativestudio_</a></li>
+          <li><a href="https://wa.me/5511963797683" target="_blank" rel="noopener">+55 (11) 96379-7683</a></li>
+          <li><a href="mailto:operacao@lunaagenciadedesign.com">operacao@lunaagenciadedesign.com</a></li>
+          <li>São Paulo · SP</li>
+        </ul>
+      </div>
+    </div>
+    <p class="footer__big" aria-hidden="true">\luna<span>.</span></p>
+    <div class="footer__bottom">
+      <span>© <span data-year>2026</span> Luna Creative Studio. Todos os direitos reservados.</span>
+      <span>Feito com café e luar.</span>
+    </div>
+  </div>
+</footer>
+<script src="js/main.js"></script>
+</body>
+</html>
