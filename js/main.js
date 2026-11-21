@@ -45,9 +45,9 @@ if ("IntersectionObserver" in window && !reduceMotion) {
 }
 
 /* ---------- Efeitos ligados à rolagem ---------- */
-var hero = document.querySelector(".hero");
-var moonScene = document.querySelector(".moon-scene");
-var moon = document.querySelector(".moon");
+var ribbons = document.querySelectorAll("[data-ribbon]");
+var wordBlock = document.querySelector("[data-words]");
+var words = wordBlock ? wordBlock.querySelectorAll(".w") : [];
 var parallaxEls = document.querySelectorAll("[data-parallax]");
 var stackCards = document.querySelectorAll(".stack-card");
 var mouse = { x: 0, y: 0 };
@@ -57,16 +57,12 @@ function onScroll() {
   var vh = window.innerHeight;
   var sy = window.scrollY;
 
-  // Lua 3D: a fase muda com a rolagem (vai "enchendo") e a luz segue o mouse
-  if (hero && moon) {
-    var hr = hero.getBoundingClientRect();
-    var p = Math.min(Math.max(-hr.top / (hr.height * 0.6), 0), 1);
-    var w = moon.offsetWidth;
-    moon.style.setProperty("--ph", (-w * 0.42 * (1 - p)).toFixed(1));
-    moon.style.setProperty("--lx", (34 + mouse.x * 30).toFixed(1) + "%");
-    moon.style.setProperty("--ly", (30 + mouse.y * 30).toFixed(1) + "%");
-    moonScene.style.setProperty("--mx", mouse.x.toFixed(3));
-    moonScene.style.setProperty("--my", (mouse.y + p * 0.8).toFixed(3));
+  // Frase de impacto: as palavras "acendem" conforme a rolagem
+  if (wordBlock) {
+    var wr = wordBlock.getBoundingClientRect();
+    var prog = Math.min(Math.max((vh * 0.85 - wr.top) / (wr.height + vh * 0.35), 0), 1);
+    var lit = Math.round(prog * words.length);
+    words.forEach(function (w, i) { w.classList.toggle("on", i < lit); });
   }
 
   // Formas decorativas flutuam em velocidades diferentes
@@ -96,15 +92,30 @@ if (!reduceMotion) {
   onScroll();
 }
 
-/* ---------- Mouse: a cena da lua acompanha o cursor ---------- */
-if (hero && finePointer && !reduceMotion) {
-  hero.addEventListener("pointermove", function (e) {
-    var r = hero.getBoundingClientRect();
-    mouse.x = (e.clientX - r.left) / r.width - 0.5;
-    mouse.y = (e.clientY - r.top) / r.height - 0.5;
-    requestTick();
+/* ---------- Faixas onduladas: o texto corre pelo caminho ----------
+   Anda sozinho e ganha velocidade quando a pessoa rola a página. */
+if (ribbons.length) {
+  var ribbonData = Array.prototype.map.call(ribbons, function (tp) {
+    var total = 0;
+    try { total = tp.getComputedTextLength(); } catch (e) {}
+    return { el: tp, speed: parseFloat(tp.dataset.ribbon) || 1, loop: total / 14 || 400 };
   });
-  hero.addEventListener("pointerleave", function () { mouse.x = 0; mouse.y = 0; requestTick(); });
+  var boost = 0, lastY = window.scrollY, pos = 0, lastT = performance.now();
+  window.addEventListener("scroll", function () {
+    boost = Math.min(boost + Math.abs(window.scrollY - lastY) * 0.5, 60);
+    lastY = window.scrollY;
+  }, { passive: true });
+  (function run(now) {
+    var dt = Math.min(now - lastT, 64) / 1000;
+    lastT = now;
+    pos += (38 + boost * 6) * dt;
+    boost *= 0.92;
+    ribbonData.forEach(function (r) {
+      var off = (pos * Math.abs(r.speed)) % r.loop;
+      r.el.setAttribute("startOffset", (r.speed > 0 ? -off : off - r.loop).toFixed(1));
+    });
+    if (!reduceMotion) requestAnimationFrame(run);
+  })(lastT);
 }
 
 /* ---------- Cartões que inclinam em 3D com o mouse ---------- */

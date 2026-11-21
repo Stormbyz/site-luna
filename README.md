@@ -55,8 +55,10 @@ Hoje as capas são ilustrações provisórias feitas em código. Para usar uma f
 ---
 
 ## Animações e efeitos
-- **Lua 3D** (topo da Home): feita só com HTML e CSS. A fase da lua muda com a rolagem, a luz segue o mouse e os serviços giram em anéis por trás e pela frente dela. Para trocar os nomes que giram, procure por `orbiter__chip` no `index.html` (eles aparecem duas vezes: camada de trás e da frente).
-- **Gradiente animado**: qualquer seção com a classe `panel--glow` ganha o fundo roxo com a mancha de cor em movimento (usado no topo, no "Conheça a Luna", na fase 4, na chamada final e no rodapé).
+- **Faixas onduladas com texto** (topo das páginas e chamada final): o texto corre sozinho e acelera quando a pessoa rola. Para trocar as palavras, procure por `ribbon__text` no HTML.
+- **Pílulas com palavras** ("Nós somos a Luna"): crescem ao passar o mouse.
+- **Frase de impacto**: as palavras acendem uma a uma conforme a rolagem (procure `statement__text`).
+- **Gradiente animado**: qualquer seção com a classe `panel--glow` ganha o fundo roxo com a mancha de cor em movimento (usado na pílula do meio, nos depoimentos, na fase 4, na chamada final e no rodapé).
 - **Revelar na rolagem**: elementos com a classe `reveal` aparecem suavemente ao entrar na tela.
 - **Cartões que inclinam** com o mouse usam o atributo `data-tilt`.
 - **Ícones de vidro fosco**: desenhados em código (SVG), com uma forma em gradiente azul→roxo atrás e outra translúcida na frente.
