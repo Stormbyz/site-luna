@@ -55,8 +55,8 @@ Hoje as capas são ilustrações provisórias feitas em código. Para usar uma f
 ---
 
 ## Animações e efeitos
-- **Logo 3D** (topo da Home): camadas de `assets/logo-profundidade.png` empilhadas pelo `js/main.js`. Gira com o mouse e com a rolagem.
-- **Gradiente animado**: qualquer seção com a classe `panel--glow` ganha o fundo roxo com a mancha de cor em movimento.
+- **Lua 3D** (topo da Home): feita só com HTML e CSS. A fase da lua muda com a rolagem, a luz segue o mouse e os serviços giram em anéis por trás e pela frente dela. Para trocar os nomes que giram, procure por `orbiter__chip` no `index.html` (eles aparecem duas vezes: camada de trás e da frente).
+- **Gradiente animado**: qualquer seção com a classe `panel--glow` ganha o fundo roxo com a mancha de cor em movimento (usado no topo, no "Conheça a Luna", na fase 4, na chamada final e no rodapé).
 - **Revelar na rolagem**: elementos com a classe `reveal` aparecem suavemente ao entrar na tela.
 - **Cartões que inclinam** com o mouse usam o atributo `data-tilt`.
 - **Ícones de vidro fosco**: desenhados em código (SVG), com uma forma em gradiente azul→roxo atrás e outra translúcida na frente.

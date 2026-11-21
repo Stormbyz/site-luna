@@ -19,20 +19,6 @@ if (nav && toggle) {
 /* ---------- Ano no rodapé ---------- */
 document.querySelectorAll("[data-year]").forEach(function (el) { el.textContent = new Date().getFullYear(); });
 
-/* ---------- Logo 3D: monta as camadas de profundidade ---------- */
-document.querySelectorAll(".logo3d").forEach(function (logo) {
-  var depth = parseInt(logo.dataset.depth || "16", 10);
-  var front = logo.querySelector(".front");
-  for (var i = depth; i >= 1; i--) {
-    var layer = document.createElement("img");
-    layer.src = "assets/logo-profundidade.png";
-    layer.alt = "";
-    layer.className = "layer";
-    layer.style.setProperty("--z", i);
-    logo.insertBefore(layer, front);
-  }
-});
-
 /* ---------- Revelar ao rolar ----------
    Só esconde o que está FORA da tela no carregamento; o resto já aparece. */
 var reveals = document.querySelectorAll(".reveal");
@@ -59,10 +45,10 @@ if ("IntersectionObserver" in window && !reduceMotion) {
 }
 
 /* ---------- Efeitos ligados à rolagem ---------- */
-var stage = document.querySelector(".stage");
-var heroLogo = document.querySelector(".hero .logo3d");
+var hero = document.querySelector(".hero");
+var moonScene = document.querySelector(".moon-scene");
+var moon = document.querySelector(".moon");
 var parallaxEls = document.querySelectorAll("[data-parallax]");
-var aboutFrame = document.querySelector(".about__frame");
 var stackCards = document.querySelectorAll(".stack-card");
 var mouse = { x: 0, y: 0 };
 var ticking = false;
@@ -71,15 +57,16 @@ function onScroll() {
   var vh = window.innerHeight;
   var sy = window.scrollY;
 
-  // Palco do hero cresce um pouco e o logo gira conforme a rolagem
-  if (stage) {
-    var r = stage.getBoundingClientRect();
-    var p = Math.min(Math.max(1 - r.top / vh, 0), 1.4);
-    stage.style.setProperty("--stage-scale", (0.94 + Math.min(p, 1) * 0.06).toFixed(3));
-    if (heroLogo) {
-      heroLogo.style.setProperty("--ry", (-18 + sy * 0.06 + mouse.x * 22).toFixed(2) + "deg");
-      heroLogo.style.setProperty("--rx", (8 - mouse.y * 14 + sy * 0.01).toFixed(2) + "deg");
-    }
+  // Lua 3D: a fase muda com a rolagem (vai "enchendo") e a luz segue o mouse
+  if (hero && moon) {
+    var hr = hero.getBoundingClientRect();
+    var p = Math.min(Math.max(-hr.top / (hr.height * 0.6), 0), 1);
+    var w = moon.offsetWidth;
+    moon.style.setProperty("--ph", (-w * 0.42 * (1 - p)).toFixed(1));
+    moon.style.setProperty("--lx", (34 + mouse.x * 30).toFixed(1) + "%");
+    moon.style.setProperty("--ly", (30 + mouse.y * 30).toFixed(1) + "%");
+    moonScene.style.setProperty("--mx", mouse.x.toFixed(3));
+    moonScene.style.setProperty("--my", (mouse.y + p * 0.8).toFixed(3));
   }
 
   // Formas decorativas flutuam em velocidades diferentes
@@ -88,13 +75,6 @@ function onScroll() {
     var box = el.parentElement.getBoundingClientRect();
     el.style.setProperty("--py", ((box.top + box.height / 2 - vh / 2) * -speed).toFixed(1) + "px");
   });
-
-  // Foto do "sobre" dá um leve zoom
-  if (aboutFrame) {
-    var a = aboutFrame.getBoundingClientRect();
-    var t = Math.min(Math.max((vh - a.top) / (vh + a.height), 0), 1);
-    aboutFrame.style.setProperty("--zoom", (1.25 - t * 0.2).toFixed(3));
-  }
 
   // Cartões empilhados: o de trás encolhe quando o próximo chega por cima
   stackCards.forEach(function (card, i) {
@@ -116,15 +96,15 @@ if (!reduceMotion) {
   onScroll();
 }
 
-/* ---------- Mouse: logo 3D segue o cursor ---------- */
-if (stage && finePointer && !reduceMotion) {
-  stage.addEventListener("pointermove", function (e) {
-    var r = stage.getBoundingClientRect();
+/* ---------- Mouse: a cena da lua acompanha o cursor ---------- */
+if (hero && finePointer && !reduceMotion) {
+  hero.addEventListener("pointermove", function (e) {
+    var r = hero.getBoundingClientRect();
     mouse.x = (e.clientX - r.left) / r.width - 0.5;
     mouse.y = (e.clientY - r.top) / r.height - 0.5;
     requestTick();
   });
-  stage.addEventListener("pointerleave", function () { mouse.x = 0; mouse.y = 0; requestTick(); });
+  hero.addEventListener("pointerleave", function () { mouse.x = 0; mouse.y = 0; requestTick(); });
 }
 
 /* ---------- Cartões que inclinam em 3D com o mouse ---------- */
